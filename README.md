@@ -1,4 +1,13 @@
 # AccountCLI
+```
+    ___   ________    ____
+   /   | / ____/ /   /  _/
+  / /| |/ /   / /    / /  
+ / ___ / /___/ /____/ /   
+/_/  |_\____/_____/___/   
+                          
+https://patorjk.com/software/taag/#p=display&f=Slant&t=ACLI
+
 project-name/
 ├── src/
 │   ├── main.py
@@ -18,27 +27,4 @@ project-name/
 ├── README.md
 └── requirements.txt
 
-user table
-CREATE TABLE Users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE NOT NULL,
-    password_hash TEXT NOT NULL
-);
-
-category table
-CREATE TABLE Categories (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    materialized_path TEXT NOT NULL,  -- Hierarchical representation
-    name TEXT NOT NULL
-);
-
-transaction table
-CREATE TABLE Transactions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date TEXT NOT NULL,              -- Store date as ISO 8601 string
-    category_id INTEGER NOT NULL,    -- Foreign key to Categories table
-    item TEXT NOT NULL,
-    amount REAL NOT NULL,            -- Represent income or expenditure
-    description TEXT,
-    FOREIGN KEY (category_id) REFERENCES Categories(id)
-);
+```

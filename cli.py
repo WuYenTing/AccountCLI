@@ -13,10 +13,21 @@ class AccountingCLI(cmd.Cmd):
 
     def __init__(self):
         super().__init__()
+        self.icon("icon.txt")
         self.auth = AuthDB()
         self.db = None
         self.user_id = None
         self.login_menu()
+
+    def icon(self, file_path):
+        try:
+            with open(file_path, 'r') as file:
+                file_content = file.read()
+                print(file_content)
+        except FileNotFoundError:
+            print(f"File '{file_path}' not found.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
     def login_menu(self):
         while True:
