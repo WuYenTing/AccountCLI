@@ -56,3 +56,6 @@ API Access: Develop an API to allow external systems to programmatically interac
 9. Backup and Restore
 Automatic Backup: Implement automatic data backups at regular intervals or before critical operations.
 Restore from Backup: Add functionality to restore data from backups when needed.
+10. Multiple files input
+Support multiple files input: Consider some user may have many record files, which may cost too much time.
+Support directory input : Support directory input and the ACLI can read and input all the files in the directory
